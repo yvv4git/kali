@@ -1,0 +1,16 @@
+# PENTEST CONTAINER
+FROM kalilinux/kali-rolling
+
+LABEL maintainer="Vladimir Eliseev <yvv4recon@gmail.com>"
+
+RUN apt-get -y update && apt-get -y upgrade && \
+    apt-get install -y kali-linux-core --fix-missing && \
+    apt-get install -y \
+    software-properties-common \
+    bash-completion git colordiff colortail unzip vim tmux zsh curl telnet strace ltrace tmate && \
+    apt-get autoremove -y && \
+    apt-get clean
+
+RUN mkdir /data
+
+CMD ["/bin/bash"]

@@ -1,2 +1,2 @@
 # kali
-Kali linux
+Docker image - Kali linux
