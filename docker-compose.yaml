@@ -3,6 +3,6 @@ version: "3.7"
 services:
     kali:
         #build: ./Dockerfile.kali
-        image: "yvv/kali"
+        image: "yvv4docker/kali"
         privileged: true
         hostname: kali
