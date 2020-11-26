@@ -8,11 +8,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update && apt-get -y upgrade && \
     apt-get install -y kali-linux-default --fix-missing && \
     apt-get install -y \
-    software-properties-common \
+    software-properties-common iputils-arping iputils-ping iputils-tracepath \
     bash-completion git colordiff colortail unzip vim tmux zsh curl telnet strace ltrace tmate && \
     apt-get autoremove -y && \
     apt-get clean
-
 
 RUN mkdir /data
 
